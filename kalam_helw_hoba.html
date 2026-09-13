@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>إلى هبة 💖</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:linear-gradient(135deg,#ffe1ed,#f3e4ff,#e0f4ff);font-family:Tahoma,Arial,sans-serif;color:#4b2340;overflow-x:hidden}
+.wrap{max-width:850px;margin:40px auto;padding:20px;position:relative;z-index:2}
+.card{background:rgba(255,255,255,.84);backdrop-filter:blur(10px);border-radius:28px;padding:32px;box-shadow:0 18px 55px rgba(100,40,90,.18)}
+h1{text-align:center;font-size:38px;margin:0 0 20px}
+.message{font-size:19px;line-height:2.05;white-space:pre-line;text-align:right}
+.heart{position:fixed;bottom:-50px;pointer-events:none;z-index:1;font-size:24px;animation:rise linear forwards}
+@keyframes rise{0%{transform:translate(0,0) scale(.7);opacity:0}12%{opacity:.9}100%{transform:translate(var(--drift),-105vh) scale(1.35);opacity:0}}
+@media(max-width:600px){.wrap{margin:18px auto;padding:12px}.card{padding:22px}h1{font-size:30px}.message{font-size:17px;line-height:2}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="card">
+<h1>إلى هبة 💖</h1>
+<div class="message">عايزك تعرفي إنك من أجمل الحاجات اللي حصلتلي وإن وجودك في حياتي مش حاجة عادية بالنسبالي أبدًا يمكن ساعات مبعرفش اعبرلك عن اللي جوايا بالطريقة الصح ويمكن كلامي مش دايمًا يقدر يوصف قد إيه إنتي مهمة عندي بس الحقيقة إن مكانتك عندي أكبر من أي كلام أنا بحب وجودك بحب كلامنا سوا وبحب حتى التفاصيل الصغيرة اللي تخصك الحاجات اللي يمكن إنتي نفسك مش شايفاها مهمة بس بالنسبالي بتفرق بحب إنك الشخص اللي مجرد كلامه ممكن يغيّر يومي وإن وجودك لوحده بيخليني أحس براحة وفرحة مختلفة ومهما حصل بينا أنا عمري ما حبيت إنك تكوني مجرد شخص عابر في حياتي إنتي ليكي مكان خاص عندي ومش بسهولة حد يقدر ياخده أنا متمسك بيكي وبالحاجة الحلوة اللي بينا ومش عايز أخلي أي زعل أو سوء تفاهم يضيع حاجة أنا شايف إنها تستاهل نحافظ عليها أنا مش بقولك إننا لازم نكون كاملين بالعكس طبيعي نختلف ونزعل ونغلط لكن اللي يفرق عندي إننا نفضل فاهمين بعض ونحاول نصلح بدل ما نبعد ولو في يوم قصرت معاكي أو حسستك بحاجة وحشة من غير ما أقصد فأنا آسف لأن آخر حاجة أتمنى تحصل هي إني أكون سبب في زعلك إنتي غالية عندي أكتر مما تتخيلي ووجودك في حياتي ليه قيمة كبيرة جدًا نفسي أفضل الشخص اللي تلاقي معاه أمان وراحة واللي تقدري تتكلمي معاه من غير ما تخافي إنك تتفهمي غلط ونفسي مهما الدنيا ضغطت علينا نفضل نرجع لبعض ونتكلم ونفهم بعض وبصراحة أنا مش محتاج مناسبة عشان أقولك إنك وحشاني أو إني بحبك بس محتاجك تعرفي إنك دايمًا في بالي وإن ليكي جزء كبير من قلبي وتفكيري يمكن الكلام كتير بس حتى الكلام ده مش قادر يوصف كل اللي جوايا ناحيتك كل اللي أتمناه إننا نفضل سوا على قد ما نقدر ونفضل نختار بعض حتى في الأيام اللي الدنيا فيها مش أحسن حاجة لأن بالنسبالي الحب مش بس كلام حلو وأوقات حلوة الحب إننا نفضل موجودين لبعض لما الأمور تبقى صعبة كمان وأنا بجد مقدّر وجودك في حياتي ومبسوط إن في إنسانة زيك قدرت تدخل قلبي بالشكل ده ربنا يخليكي ليا ويفضل بينا الخير والراحة والضحكة الحلوة أنا بحبك موت ياهبه</div>
+</div>
+</div>
+<script>
+const emojis=["💗","💖","💕","💓","💞","❤️"];
+function heart(){
+  const h=document.createElement("div");
+  h.className="heart";
+  h.textContent=emojis[Math.floor(Math.random()*emojis.length)];
+  const card=document.querySelector(".card").getBoundingClientRect();
+  const x=card.left+Math.random()*card.width;
+  h.style.left=x+"px";
+  h.style.setProperty("--drift",(Math.random()*180-90)+"px");
+  h.style.animationDuration=(5+Math.random()*4)+"s";
+  h.style.fontSize=(18+Math.random()*18)+"px";
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),9500);
+}
+setInterval(heart,350);
+</script>
+</body>
+</html>
